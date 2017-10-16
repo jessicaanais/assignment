@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User #<%= result.id%></title>
+  </head>
+  <style>
+  table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 5%;
+  }
+
+  td, th {
+      border: 2px solid #DBEAF9;
+      text-align: left;
+      padding: 8px;
+  }
+
+  tr:nth-child(even) {
+      background-color: #DBEAF9;
+  }
+  button {
+    background-color: #DBEAF9;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+    outline: none;
+  }
+
+  </style>
+  <body>
+    <p>Id - <%= result.id %></p>
+    <p>Name - <%= result.first %> <%= result.last %></p>
+    <p>Email - <%= result.email %></p>
+    <p>Age - <%= result.age %></p>
+    <a href="/edit/<%= result.id %>">Edit</a> - <a href="/delete/<%= result.id %>">Delete</a>
+  </body>
+</html>

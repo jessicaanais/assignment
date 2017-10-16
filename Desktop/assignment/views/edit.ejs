@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Updating</title>
+  </head>
+  <h1><%= result.first%></h1>
+  <body>
+    <form action="/update/<%= result.id %>" method="post">
+      <input type="text" name="first" value="<%=result.first%>">
+      <input type="text" name="last" value="<%=result.last%>">
+      <input type="email" name="email" value="<%=result.email%>">
+      <input type="number" name="age" value="<%=result.age%>">
+      <input type="submit" value="Update">
+    </form>
+  </body>
+</html>
